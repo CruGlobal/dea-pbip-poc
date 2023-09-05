@@ -1,3 +1,3 @@
 # dea-pbip-poc
 
-## practicing with the .pbip projects and git
+practicing with the .pbip projects and git

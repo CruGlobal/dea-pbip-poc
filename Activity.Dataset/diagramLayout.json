@@ -1,0 +1,87 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 404.6240180535147,
+            "y": 124.18674976022979
+          },
+          "nodeIndex": "Activity",
+          "nodeLineageTag": "59de7511-0a89-41ff-b4f7-c4db42c68b5f",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 796.08910279326813,
+            "y": 0
+          },
+          "nodeIndex": "Date",
+          "nodeLineageTag": "447e6955-c64f-4e8b-907d-a1fcc2b2d28f",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 255.17817967388913,
+            "y": 452.91917979025493
+          },
+          "nodeIndex": "Exercise",
+          "nodeLineageTag": "4950af81-0977-4feb-9fda-a9afa49ac059",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 734.4850724955611,
+            "y": 390.32564806656245
+          },
+          "nodeIndex": "Location",
+          "nodeLineageTag": "3511cf7d-e8b0-4d69-8573-bbd50daad951",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 83,
+            "y": 0
+          },
+          "nodeIndex": "Person",
+          "nodeLineageTag": "d5428e3c-8beb-4b1c-8522-eb028367afec",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

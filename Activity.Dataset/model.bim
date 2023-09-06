@@ -4,7 +4,7 @@
     "annotations": [
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Activity\",\"Date\",\"Exercise\",\"Person\",\"Location\"]"
+        "value": "[\"Date\",\"Exercise\",\"Person\",\"Location\",\"Activities\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -48,140 +48,36 @@
         "toTable": "LocalDateTable_4a12eac1-e221-4662-9c7c-a0b68bd5e44f"
       },
       {
-        "name": "bac2479b-c62d-450c-b3c2-0fc29691a97a",
+        "name": "7fdc8ccd-3453-4e11-ac32-3a4d0c9c849e",
         "fromColumn": "DateID",
-        "fromTable": "Activity",
+        "fromTable": "Activities",
         "toColumn": "DateID",
         "toTable": "Date"
       },
       {
-        "name": "c9c7ddc0-8cb7-432b-801f-78036221dce3",
-        "fromColumn": "PersonID",
-        "fromTable": "Activity",
-        "toColumn": "PersonID",
-        "toTable": "Person"
-      },
-      {
-        "name": "b306bc90-9585-44bc-8536-8c659335f529",
+        "name": "c5505d8a-2872-4827-bbcd-0fa5dd27c44b",
         "fromColumn": "ExerciseID",
-        "fromTable": "Activity",
+        "fromTable": "Activities",
         "toColumn": "ExerciseID",
         "toTable": "Exercise"
       },
       {
-        "name": "ce620604-479d-437c-9970-c18e8cb698f9",
+        "name": "97be990a-2bd4-4b04-8930-19074caaf872",
+        "fromColumn": "PersonID",
+        "fromTable": "Activities",
+        "toColumn": "PersonID",
+        "toTable": "Person"
+      },
+      {
+        "name": "be2b60e2-bcec-4edf-b864-83ccc891dbf2",
         "fromColumn": "LocationID",
-        "fromTable": "Activity",
+        "fromTable": "Activities",
         "toColumn": "LocationID",
         "toTable": "Location"
       }
     ],
     "sourceQueryCulture": "en-US",
     "tables": [
-      {
-        "name": "Activity",
-        "annotations": [
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          }
-        ],
-        "columns": [
-          {
-            "name": "ActivityID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "af13f772-6349-4072-96fc-f37f934f1ab9",
-            "sourceColumn": "ActivityID",
-            "summarizeBy": "count"
-          },
-          {
-            "name": "DateID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "e6c45e11-88ac-48d9-a081-68cc3988fab8",
-            "sourceColumn": "DateID",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "PersonID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "03b13662-4cc3-4530-b414-4e54e4a7aa2d",
-            "sourceColumn": "PersonID",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "LocationID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "a52e5455-4680-4e3b-a4a1-d402dff81fb5",
-            "sourceColumn": "LocationID",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "ExerciseID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "1e9d8b39-cf86-492e-b227-693b24c8b065",
-            "sourceColumn": "ExerciseID",
-            "summarizeBy": "none"
-          }
-        ],
-        "lineageTag": "59de7511-0a89-41ff-b4f7-c4db42c68b5f",
-        "partitions": [
-          {
-            "name": "Activity",
-            "mode": "import",
-            "source": {
-              "expression": [
-                "let",
-                "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1ZAUomYSVDANi5sFwfJvL40u1LwY1k61RIJFQHugYjDY/edit#gid=0\"),",
-                "    Activity_Table = Source{[name=\"Activity\",ItemKind=\"Table\"]}[Data],",
-                "    #\"Promoted Headers\" = Table.PromoteHeaders(Activity_Table, [PromoteAllScalars=true]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"ActivityID\", Int64.Type}, {\"DateID\", Int64.Type}, {\"PersonID\", Int64.Type}, {\"LocationID\", Int64.Type}, {\"ExerciseID\", Int64.Type}})",
-                "in",
-                "    #\"Changed Type\""
-              ],
-              "type": "m"
-            }
-          }
-        ]
-      },
       {
         "name": "DateTableTemplate_a829b0df-9a9e-431c-b611-c3cd7953e5b9",
         "annotations": [
@@ -932,6 +828,110 @@
                 "    Location_Table = Source{[name=\"Location\",ItemKind=\"Table\"]}[Data],",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Location_Table, [PromoteAllScalars=true]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"LocationID\", Int64.Type}, {\"Location\", type text}, {\"Route\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Activities",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ActivityID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "59d42c18-4db8-4095-a984-06fe1488fb14",
+            "sourceColumn": "ActivityID",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "DateID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0cd16faf-b21f-4fb4-8fa9-7e15f726d28c",
+            "sourceColumn": "DateID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PersonID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "238a5e9e-9e13-4364-82ba-1ddb85df0060",
+            "sourceColumn": "PersonID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LocationID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f32ef684-1320-4466-845b-01732cb7ae8a",
+            "sourceColumn": "LocationID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ExerciseID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "18059e75-54f9-4b48-84a0-ec10f6f4dd1c",
+            "sourceColumn": "ExerciseID",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "7b8effca-c720-41f1-a4a8-43fe3f91e34f",
+        "partitions": [
+          {
+            "name": "Activities",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1ZAUomYSVDANi5sFwfJvL40u1LwY1k61RIJFQHugYjDY/edit#gid=0\"),",
+                "    Activities_Table = Source{[name=\"Activities\",ItemKind=\"Table\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Activities_Table, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"ActivityID\", Int64.Type}, {\"DateID\", Int64.Type}, {\"PersonID\", Int64.Type}, {\"LocationID\", Int64.Type}, {\"ExerciseID\", Int64.Type}})",
                 "in",
                 "    #\"Changed Type\""
               ],

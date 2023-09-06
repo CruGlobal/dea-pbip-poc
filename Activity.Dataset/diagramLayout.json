@@ -4,23 +4,10 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 2.4850724955610985,
-        "y": 0
+        "x": 0,
+        "y": 139.92138671875
       },
       "nodes": [
-        {
-          "location": {
-            "x": 431.6240180535147,
-            "y": 214.18674976022979
-          },
-          "nodeIndex": "Activity",
-          "nodeLineageTag": "59de7511-0a89-41ff-b4f7-c4db42c68b5f",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 0
-        },
         {
           "location": {
             "x": 690.08910279326813,
@@ -62,13 +49,26 @@
         },
         {
           "location": {
-            "x": 165,
-            "y": 6
+            "x": 148,
+            "y": 0
           },
           "nodeIndex": "Person",
           "nodeLineageTag": "d5428e3c-8beb-4b1c-8522-eb028367afec",
           "size": {
             "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 396.30689282167191,
+            "y": 186.45958989512746
+          },
+          "nodeIndex": "Activities",
+          "nodeLineageTag": "7b8effca-c720-41f1-a4a8-43fe3f91e34f",
+          "size": {
+            "height": 200,
             "width": 234
           },
           "zIndex": 0

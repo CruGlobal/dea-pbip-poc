@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.47\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.47\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "config": "{\"version\":\"5.47\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.47\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -27,22 +27,31 @@
       "name": "ReportSection",
       "visualContainers": [
         {
-          "config": "{\"name\":\"414be8e98add6271c6e8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.719058466211086,\"y\":0,\"z\":0,\"width\":688.109339407745,\"height\":525.8010630220198,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Person.FirstName)\"}],\"Category\":[{\"queryRef\":\"Person.FirstName\",\"active\":true}],\"Series\":[{\"queryRef\":\"Exercise.Exercise\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Person\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"Exercise\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"FirstName\"}},\"Function\":5},\"Name\":\"CountNonNull(Person.FirstName)\",\"NativeReferenceName\":\"Count of FirstName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"FirstName\"},\"Name\":\"Person.FirstName\",\"NativeReferenceName\":\"FirstName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Exercise\"},\"Name\":\"Exercise.Exercise\",\"NativeReferenceName\":\"Exercise\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"FirstName\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{}}}",
+          "config": "{\"name\":\"12e2e480c548affc194a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":2000,\"width\":165.22399392558847,\"height\":204.10022779043283,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Person.FirstName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Person\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"FirstName\"},\"Name\":\"Person.FirstName\",\"NativeReferenceName\":\"FirstName\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
           "filters": "[]",
-          "height": 525.80,
-          "width": 688.11,
-          "x": 9.72,
+          "height": 204.10,
+          "width": 165.22,
+          "x": 0.00,
           "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"414be8e98add6271c6e8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":281.85269552012153,\"z\":0,\"width\":688.109339407745,\"height\":246.8640850417616,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Person.FirstName\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Person.FirstName)\"}],\"Series\":[{\"queryRef\":\"Exercise.Exercise\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Person\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"Exercise\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"FirstName\"},\"Name\":\"Person.FirstName\",\"NativeReferenceName\":\"FirstName\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"FirstName\"}},\"Function\":5},\"Name\":\"CountNonNull(Person.FirstName)\",\"NativeReferenceName\":\"Count of FirstName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Exercise\"},\"Name\":\"Exercise.Exercise\",\"NativeReferenceName\":\"Exercise\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"FirstName\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{}}}",
+          "filters": "[]",
+          "height": 246.86,
+          "width": 688.11,
+          "x": 0.00,
+          "y": 281.85,
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"f34df856efa919d7d41b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1007.8663629460897,\"y\":0,\"z\":1,\"width\":272.13363705391043,\"height\":601.6097190584662}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Location.Location\"},{\"queryRef\":\"Exercise.Exercise\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"Location\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"Exercise\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Location\"},\"Name\":\"Location.Location\",\"NativeReferenceName\":\"Location\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Exercise\"},\"Name\":\"Exercise.Exercise\",\"NativeReferenceName\":\"Exercise\"}]},\"drillFilterOtherVisuals\":true}}",
-          "filters": "[]",
-          "height": 601.61,
-          "width": 272.13,
-          "x": 1007.87,
+          "config": "{\"name\":\"f34df856efa919d7d41b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":165.22399392558847,\"y\":0,\"z\":1000,\"width\":321.70083523158695,\"height\":204.10022779043283,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Exercise.Exercise\"},{\"queryRef\":\"Location.Location\"},{\"queryRef\":\"Location.Route\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"Exercise\",\"Type\":0},{\"Name\":\"l\",\"Entity\":\"Location\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Exercise\"},\"Name\":\"Exercise.Exercise\",\"NativeReferenceName\":\"Exercise\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Location\"},\"Name\":\"Location.Location\",\"NativeReferenceName\":\"Location\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Route\"},\"Name\":\"Location.Route\",\"NativeReferenceName\":\"Route\"}]},\"drillFilterOtherVisuals\":true,\"filterSortOrder\":3}}",
+          "filters": "[{\"name\":\"Filter6c7b9f5f2886cd6a297d\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Exercise\"}},\"Property\":\"Exercise\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":0},{\"name\":\"Filteref447739d743f58809b4\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Location\"}},\"Property\":\"Name\"}},\"type\":\"Categorical\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"ordinal\":1}]",
+          "height": 204.10,
+          "width": 321.70,
+          "x": 165.22,
           "y": 0.00,
-          "z": 1.00
+          "z": 1000.00
         }
       ],
       "width": 1280.00

@@ -49,13 +49,13 @@
         },
         {
           "location": {
-            "x": 735.4850724955611,
-            "y": 490.32564806656251
+            "x": 734.4850724955611,
+            "y": 385.32564806656251
           },
           "nodeIndex": "Location",
           "nodeLineageTag": "3511cf7d-e8b0-4d69-8573-bbd50daad951",
           "size": {
-            "height": 162,
+            "height": 230,
             "width": 234
           },
           "zIndex": 0

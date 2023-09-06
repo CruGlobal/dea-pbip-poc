@@ -4,7 +4,7 @@
     "annotations": [
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Activity\",\"Date\",\"Exercise\",\"Location\",\"Person\"]"
+        "value": "[\"Activity\",\"Date\",\"Exercise\",\"Person\",\"Location\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -62,18 +62,18 @@
         "toTable": "Person"
       },
       {
-        "name": "36e6bb88-c3d1-4497-8dac-ed126d768ea9",
-        "fromColumn": "LocationID",
-        "fromTable": "Activity",
-        "toColumn": "LocationID",
-        "toTable": "Location"
-      },
-      {
         "name": "b306bc90-9585-44bc-8536-8c659335f529",
         "fromColumn": "ExerciseID",
         "fromTable": "Activity",
         "toColumn": "ExerciseID",
         "toTable": "Exercise"
+      },
+      {
+        "name": "ce620604-479d-437c-9970-c18e8cb698f9",
+        "fromColumn": "LocationID",
+        "fromTable": "Activity",
+        "toColumn": "LocationID",
+        "toTable": "Location"
       }
     ],
     "sourceQueryCulture": "en-US",
@@ -82,12 +82,12 @@
         "name": "Activity",
         "annotations": [
           {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -403,12 +403,12 @@
         "name": "Date",
         "annotations": [
           {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -735,12 +735,12 @@
         "name": "Exercise",
         "annotations": [
           {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -793,89 +793,15 @@
         ]
       },
       {
-        "name": "Location",
-        "annotations": [
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          }
-        ],
-        "columns": [
-          {
-            "name": "LocationID",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "7271e489-8eb5-4c7e-9645-30144b75132d",
-            "sourceColumn": "LocationID",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Location",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "66247f99-3e58-435e-b091-4a4d3ea245e2",
-            "sourceColumn": "Location",
-            "summarizeBy": "none"
-          },
-          {
-            "name": "Name",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "1e9b7522-be61-4c60-9b54-c5b34d03ddf0",
-            "sourceColumn": "Name",
-            "summarizeBy": "none"
-          }
-        ],
-        "lineageTag": "3511cf7d-e8b0-4d69-8573-bbd50daad951",
-        "partitions": [
-          {
-            "name": "Location",
-            "mode": "import",
-            "source": {
-              "expression": [
-                "let",
-                "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1ZAUomYSVDANi5sFwfJvL40u1LwY1k61RIJFQHugYjDY/edit#gid=0\"),",
-                "    Location_Table = Source{[name=\"Location\",ItemKind=\"Table\"]}[Data],",
-                "    #\"Promoted Headers\" = Table.PromoteHeaders(Location_Table, [PromoteAllScalars=true]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"LocationID\", Int64.Type}, {\"Location\", type text}, {\"Name\", type text}})",
-                "in",
-                "    #\"Changed Type\""
-              ],
-              "type": "m"
-            }
-          }
-        ]
-      },
-      {
         "name": "Person",
         "annotations": [
           {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -932,6 +858,80 @@
                 "    Person_Table = Source{[name=\"Person\",ItemKind=\"Table\"]}[Data],",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Person_Table, [PromoteAllScalars=true]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"PersonID\", Int64.Type}, {\"FirstName\", type text}, {\"LastName\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Location",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "LocationID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3e1b4d52-5b72-440e-9ac8-35c819e5bb14",
+            "sourceColumn": "LocationID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Location",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fd80d473-7f31-41f6-9138-f4ad1db187db",
+            "sourceColumn": "Location",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Route",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a108c380-2b72-47ed-b81d-84521ef02426",
+            "sourceColumn": "Route",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "d53ec490-4533-4a04-a593-7933b7531a17",
+        "partitions": [
+          {
+            "name": "Location",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1ZAUomYSVDANi5sFwfJvL40u1LwY1k61RIJFQHugYjDY/edit#gid=0\"),",
+                "    Location_Table = Source{[name=\"Location\",ItemKind=\"Table\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Location_Table, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"LocationID\", Int64.Type}, {\"Location\", type text}, {\"Route\", type text}})",
                 "in",
                 "    #\"Changed Type\""
               ],

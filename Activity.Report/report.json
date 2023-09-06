@@ -34,6 +34,15 @@
           "x": 9.72,
           "y": 0.00,
           "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"f34df856efa919d7d41b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1007.8663629460897,\"y\":0,\"z\":1,\"width\":272.13363705391043,\"height\":601.6097190584662}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Location.Location\"},{\"queryRef\":\"Exercise.Exercise\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"Location\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"Exercise\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Location\"},\"Name\":\"Location.Location\",\"NativeReferenceName\":\"Location\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Exercise\"},\"Name\":\"Exercise.Exercise\",\"NativeReferenceName\":\"Exercise\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 601.61,
+          "width": 272.13,
+          "x": 1007.87,
+          "y": 0.00,
+          "z": 1.00
         }
       ],
       "width": 1280.00

@@ -48,13 +48,6 @@
         "toTable": "LocalDateTable_4a12eac1-e221-4662-9c7c-a0b68bd5e44f"
       },
       {
-        "name": "7fdc8ccd-3453-4e11-ac32-3a4d0c9c849e",
-        "fromColumn": "DateID",
-        "fromTable": "Activities",
-        "toColumn": "DateID",
-        "toTable": "Date"
-      },
-      {
         "name": "c5505d8a-2872-4827-bbcd-0fa5dd27c44b",
         "fromColumn": "ExerciseID",
         "fromTable": "Activities",
@@ -74,6 +67,13 @@
         "fromTable": "Activities",
         "toColumn": "LocationID",
         "toTable": "Location"
+      },
+      {
+        "name": "2344d834-aaa2-4107-9e9b-aad744847020",
+        "fromColumn": "DateID",
+        "fromTable": "Activities",
+        "toColumn": "DateID",
+        "toTable": "Date"
       }
     ],
     "sourceQueryCulture": "en-US",

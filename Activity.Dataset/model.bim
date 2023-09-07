@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.120.731.0 (23.08)"
+        "value": "2.120.963.0 (23.08)"
       },
       {
         "name": "PBI_ProTooling",
@@ -101,7 +101,6 @@
             ],
             "dataCategory": "PaddedDateTableDates",
             "dataType": "dateTime",
-            "formatString": "General Date",
             "isDataTypeInferred": true,
             "isHidden": true,
             "isNameInferred": true,
@@ -125,7 +124,6 @@
             "dataCategory": "Years",
             "dataType": "int64",
             "expression": "YEAR([Date])",
-            "formatString": "0",
             "isDataTypeInferred": true,
             "isHidden": true,
             "lineageTag": "4fdc1d0a-fee7-4870-a373-7a55ef073912",
@@ -147,7 +145,6 @@
             "dataCategory": "MonthOfYear",
             "dataType": "int64",
             "expression": "MONTH([Date])",
-            "formatString": "0",
             "isDataTypeInferred": true,
             "isHidden": true,
             "lineageTag": "c1b8000f-9bc1-4ace-b51c-c986ee7305bd",
@@ -191,7 +188,6 @@
             "dataCategory": "QuarterOfYear",
             "dataType": "int64",
             "expression": "INT(([MonthNo] + 2) / 3)",
-            "formatString": "0",
             "isDataTypeInferred": true,
             "isHidden": true,
             "lineageTag": "7749578e-9a9a-4ebd-9c6d-356aa52d26b8",
@@ -235,7 +231,6 @@
             "dataCategory": "DayOfMonth",
             "dataType": "int64",
             "expression": "DAY([Date])",
-            "formatString": "0",
             "isDataTypeInferred": true,
             "isHidden": true,
             "lineageTag": "3663f09d-e998-4c22-9904-c20f76df7496",
@@ -301,10 +296,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
@@ -433,7 +424,6 @@
             ],
             "dataCategory": "PaddedDateTableDates",
             "dataType": "dateTime",
-            "formatString": "General Date",
             "isDataTypeInferred": true,
             "isHidden": true,
             "isNameInferred": true,
@@ -457,7 +447,6 @@
             "dataCategory": "Years",
             "dataType": "int64",
             "expression": "YEAR([Date])",
-            "formatString": "0",
             "isDataTypeInferred": true,
             "isHidden": true,
             "lineageTag": "aed5b848-1c6a-4cae-8b01-7bb8657c0109",
@@ -479,7 +468,6 @@
             "dataCategory": "MonthOfYear",
             "dataType": "int64",
             "expression": "MONTH([Date])",
-            "formatString": "0",
             "isDataTypeInferred": true,
             "isHidden": true,
             "lineageTag": "c7e40721-df9f-4e73-856c-80ebbfbe916f",
@@ -523,7 +511,6 @@
             "dataCategory": "QuarterOfYear",
             "dataType": "int64",
             "expression": "INT(([MonthNo] + 2) / 3)",
-            "formatString": "0",
             "isDataTypeInferred": true,
             "isHidden": true,
             "lineageTag": "f5dd0549-b820-4894-9559-ee350dc916a4",
@@ -567,7 +554,6 @@
             "dataCategory": "DayOfMonth",
             "dataType": "int64",
             "expression": "DAY([Date])",
-            "formatString": "0",
             "isDataTypeInferred": true,
             "isHidden": true,
             "lineageTag": "bf3f6432-bade-4c13-8424-0d813eb9a7e7",
@@ -633,10 +619,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
@@ -694,10 +676,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
@@ -765,10 +743,6 @@
       {
         "name": "Location",
         "annotations": [
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
           {
             "name": "PBI_ResultType",
             "value": "Table"
@@ -839,10 +813,6 @@
       {
         "name": "Activities",
         "annotations": [
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
           {
             "name": "PBI_ResultType",
             "value": "Table"

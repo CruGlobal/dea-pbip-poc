@@ -27,12 +27,12 @@
       "name": "ReportSection",
       "visualContainers": [
         {
-          "config": "{\"name\":\"0d115eb2317c47a37d03\",\"layouts\":[{\"id\":0,\"position\":{\"x\":195.35307517084283,\"y\":0,\"z\":3000,\"width\":593.8344722854974,\"height\":180.77448747152621,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Activities.ActivityID)\"}],\"Category\":[{\"queryRef\":\"Location.Location\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Activities\",\"Type\":0},{\"Name\":\"l\",\"Entity\":\"Location\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ActivityID\"}},\"Function\":5},\"Name\":\"CountNonNull(Activities.ActivityID)\",\"NativeReferenceName\":\"Count of ActivityID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Location\"},\"Name\":\"Location.Location\",\"NativeReferenceName\":\"Location\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ActivityID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"0d115eb2317c47a37d03\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":359.60516324981023,\"z\":3000,\"width\":593.8344722854974,\"height\":180.77448747152621,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Activities.ActivityID)\"}],\"Category\":[{\"queryRef\":\"Location.Location\",\"active\":true}],\"Series\":[{\"queryRef\":\"Exercise.Exercise\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Activities\",\"Type\":0},{\"Name\":\"l\",\"Entity\":\"Location\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"Exercise\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ActivityID\"}},\"Function\":5},\"Name\":\"CountNonNull(Activities.ActivityID)\",\"NativeReferenceName\":\"Count of ActivityID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Location\"},\"Name\":\"Location.Location\",\"NativeReferenceName\":\"Location\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Exercise\"},\"Name\":\"Exercise.Exercise\",\"NativeReferenceName\":\"Exercise\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ActivityID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 180.77,
           "width": 593.83,
-          "x": 195.35,
-          "y": 0.00,
+          "x": 0.00,
+          "y": 359.61,
           "z": 3000.00
         },
         {
@@ -45,12 +45,21 @@
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"dc638539bf2d668edc58\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":232.28549734244498,\"z\":2000,\"width\":789.1875474563402,\"height\":180.77448747152621,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Activities.ActivityID)\"}],\"Category\":[{\"queryRef\":\"Person.FirstName\",\"active\":true}],\"Series\":[{\"queryRef\":\"Exercise.Exercise\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Activities\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"Person\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"Exercise\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ActivityID\"}},\"Function\":5},\"Name\":\"CountNonNull(Activities.ActivityID)\",\"NativeReferenceName\":\"Count of ActivityID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"FirstName\"},\"Name\":\"Person.FirstName\",\"NativeReferenceName\":\"FirstName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Exercise\"},\"Name\":\"Exercise.Exercise\",\"NativeReferenceName\":\"Exercise\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ActivityID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"b85baf3150ebcd181db8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":664.7835990888383,\"y\":349.88610478359914,\"z\":3001,\"width\":550.0987091875475,\"height\":333.3637053910403,\"tabOrder\":3001}}],\"singleVisual\":{\"visualType\":\"lineStackedColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Location.Route\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Activities.ActivityID)\"}],\"Series\":[{\"queryRef\":\"Location.Location\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Activities\",\"Type\":0},{\"Name\":\"l\",\"Entity\":\"Location\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Route\"},\"Name\":\"Location.Route\",\"NativeReferenceName\":\"Route\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ActivityID\"}},\"Function\":5},\"Name\":\"CountNonNull(Activities.ActivityID)\",\"NativeReferenceName\":\"Count of ActivityID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Location\"},\"Name\":\"Location.Location\",\"NativeReferenceName\":\"Location\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ActivityID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 333.36,
+          "width": 550.10,
+          "x": 664.78,
+          "y": 349.89,
+          "z": 3001.00
+        },
+        {
+          "config": "{\"name\":\"dc638539bf2d668edc58\",\"layouts\":[{\"id\":0,\"position\":{\"x\":184.66211085801064,\"y\":0,\"z\":2000,\"width\":786.2718299164769,\"height\":180.77448747152621,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Activities.ActivityID)\"}],\"Category\":[{\"queryRef\":\"Person.FirstName\",\"active\":true}],\"Series\":[{\"queryRef\":\"Exercise.Exercise\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Activities\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"Person\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"Exercise\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ActivityID\"}},\"Function\":5},\"Name\":\"CountNonNull(Activities.ActivityID)\",\"NativeReferenceName\":\"Count of ActivityID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"FirstName\"},\"Name\":\"Person.FirstName\",\"NativeReferenceName\":\"FirstName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Exercise\"},\"Name\":\"Exercise.Exercise\",\"NativeReferenceName\":\"Exercise\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"ActivityID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 180.77,
-          "width": 789.19,
-          "x": 0.00,
-          "y": 232.29,
+          "width": 786.27,
+          "x": 184.66,
+          "y": 0.00,
           "z": 2000.00
         }
       ],
